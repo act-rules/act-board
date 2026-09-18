@@ -1,0 +1,6 @@
+approval-report.json
+.DS_Store
+*.pem
+act-tools/
+act-rules.github.io/
+wcag-act-rules/
