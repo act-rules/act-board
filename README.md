@@ -52,10 +52,10 @@ Manual run: **Actions → Sync ACT board → Run workflow**.
 
 ### act-tools pin
 
-`sync-act-board-project` and `write-act-board-snapshot` only exist on the
-[act-tools#71](https://github.com/act-rules/act-tools/pull/71) branch, so the
-act-tools checkout pins `ref: issue-65-project-sync`. Once that pull request
-merges, retarget the pin to a SHA on act-tools `main`.
+The workflow checks out act-tools at
+[`0e5820e`](https://github.com/act-rules/act-tools/commit/0e5820e251376e3c6e61978e0a12a0b07f540f1a)
+(the [act-tools#71](https://github.com/act-rules/act-tools/pull/71) merge on
+`main`). Bump that `ref` when the board job should pick up newer act-tools.
 
 ### Keeping the schedule alive
 

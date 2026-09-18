@@ -46,12 +46,13 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.token }}
 
-      # Pinned to the act-tools#71 branch, which adds sync-act-board-project
-      # and write-act-board-snapshot. Retarget to a main SHA once #71 merges.
+      # Pin to the act-tools#71 merge on main (sync-act-board-project /
+      # write-act-board-snapshot). Bump this SHA when the board job needs
+      # newer act-tools.
       - uses: actions/checkout@v4
         with:
           repository: act-rules/act-tools
-          ref: issue-65-project-sync
+          ref: 0e5820e251376e3c6e61978e0a12a0b07f540f1a
           path: act-tools
           persist-credentials: false
 
