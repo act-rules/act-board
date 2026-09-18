@@ -5,17 +5,30 @@ on:
     - cron: "0 6 * * 1"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-act-board
+  cancel-in-progress: false
+
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - name: Require GitHub App secrets
+      - name: Require GitHub App secrets and board variable
         env:
           APP_ID: ${{ secrets.APP_ID }}
           APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+          ACT_BOARD_PROJECT_NUMBER: ${{ vars.ACT_BOARD_PROJECT_NUMBER }}
         run: |
           if [ -z "$APP_ID" ] || [ -z "$APP_PRIVATE_KEY" ]; then
             echo "APP_ID and APP_PRIVATE_KEY must be set as repository Actions secrets."
+            exit 1
+          fi
+          if [ -z "$ACT_BOARD_PROJECT_NUMBER" ]; then
+            echo "Set repository variable ACT_BOARD_PROJECT_NUMBER to the Projects v2 number."
             exit 1
           fi
 
@@ -33,26 +46,32 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.token }}
 
+      # Pinned to the act-tools#71 branch, which adds sync-act-board-project
+      # and write-act-board-snapshot. Retarget to a main SHA once #71 merges.
       - uses: actions/checkout@v4
         with:
           repository: act-rules/act-tools
+          ref: issue-65-project-sync
           path: act-tools
-          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: false
 
+      # The classifier reads git history, so this checkout cannot be shallow.
       - uses: actions/checkout@v4
         with:
           repository: act-rules/act-rules.github.io
           path: act-rules.github.io
-          token: ${{ steps.app-token.outputs.token }}
+          fetch-depth: 0
+          persist-credentials: false
 
       - uses: actions/checkout@v4
         with:
           repository: w3c/wcag-act-rules
           path: wcag-act-rules
+          persist-credentials: false
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: yarn
           cache-dependency-path: act-tools/yarn.lock
 
@@ -68,10 +87,6 @@ jobs:
           ACT_BOARD_PROJECT_NUMBER: ${{ vars.ACT_BOARD_PROJECT_NUMBER }}
         working-directory: act-tools
         run: |
-          if [ -z "$ACT_BOARD_PROJECT_NUMBER" ]; then
-            echo "Set repository variable ACT_BOARD_PROJECT_NUMBER to the Projects v2 number."
-            exit 1
-          fi
           yarn approval-report \
             --rulesDir ../act-rules.github.io/_rules \
             --glossaryDir ../act-rules.github.io/pages/glossary \
@@ -95,4 +110,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "chore: update classifier snapshot"
+          git pull --rebase --autostash
           git push

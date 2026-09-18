@@ -49,3 +49,16 @@ Optional Project fields that do not exist yet are skipped with a warning.
 A missing Status field fails the job.
 
 Manual run: **Actions → Sync ACT board → Run workflow**.
+
+### act-tools pin
+
+`sync-act-board-project` and `write-act-board-snapshot` only exist on the
+[act-tools#71](https://github.com/act-rules/act-tools/pull/71) branch, so the
+act-tools checkout pins `ref: issue-65-project-sync`. Once that pull request
+merges, retarget the pin to a SHA on act-tools `main`.
+
+### Keeping the schedule alive
+
+GitHub disables scheduled workflows in repositories with no activity for 60
+days, and emails the repository admins when it does. If the weekly run stops,
+push a commit or re-enable the workflow from the Actions tab.
