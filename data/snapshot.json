@@ -7447,10 +7447,12 @@
     "filename": "visible-label-in-accessible-name-2ee8b8.md",
     "ruleTypeSummary": "atomic",
     "waiApproved": false,
-    "status": "Awaiting implementation",
+    "status": "Proposed, reviewable",
     "reviewPrUrl": null,
-    "reportBucket": "notReady",
-    "implementations": [],
+    "reportBucket": "proposedReadyForUpdate",
+    "implementations": [
+      "SortSite"
+    ],
     "issues": [
       {
         "number": 2236,
