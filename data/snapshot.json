@@ -584,6 +584,8 @@
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
+      "Axe DevTools Pro",
+      "Axe-core",
       "Equal Access Accessibility Checker",
       "QualWeb",
       "SortSite",
@@ -1383,6 +1385,8 @@
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
+      "Axe DevTools Pro",
+      "Axe-core",
       "Equal Access Accessibility Checker",
       "QualWeb",
       "SortSite"
@@ -4044,6 +4048,8 @@
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
+      "Axe DevTools Pro",
+      "Axe-core",
       "Equal Access Accessibility Checker",
       "SortSite",
       "Total Validator",
@@ -4148,6 +4154,8 @@
     "reviewPrUrl": null,
     "reportBucket": "approvedReadyForUpdate",
     "implementations": [
+      "Axe DevTools Pro",
+      "Axe-core",
       "Equal Access Accessibility Checker",
       "SortSite",
       "Total Validator",
@@ -4254,6 +4262,8 @@
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
+      "Axe DevTools Pro",
+      "Axe-core",
       "Equal Access Accessibility Checker",
       "SortSite",
       "Total Validator",
@@ -5328,8 +5338,6 @@
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
-      "Axe DevTools Pro",
-      "Axe-core",
       "Equal Access Accessibility Checker",
       "QualWeb",
       "SortSite",
@@ -5852,6 +5860,8 @@
       "@accesslint/core",
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
+      "Axe DevTools Pro",
+      "Axe-core",
       "Equal Access Accessibility Checker",
       "QualWeb",
       "SortSite",
@@ -7461,6 +7471,8 @@
     "reviewPrUrl": null,
     "reportBucket": "proposedReadyForUpdate",
     "implementations": [
+      "Axe DevTools Pro",
+      "Axe-core",
       "SortSite"
     ],
     "issues": [
