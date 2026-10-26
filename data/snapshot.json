@@ -3682,6 +3682,12 @@
     "implementations": [],
     "issues": [
       {
+        "number": 2467,
+        "title": "[0va7u6]",
+        "html_url": "https://github.com/act-rules/act-rules.github.io/issues/2467",
+        "labelNames": []
+      },
+      {
         "number": 2408,
         "title": "\"HTML images contain no text\" [0va7u6]: Definition of \"rendered image resource\" is incorrect",
         "html_url": "https://github.com/act-rules/act-rules.github.io/issues/2408",
