@@ -551,14 +551,6 @@
         "labelNames": [
           "help wanted"
         ]
-      },
-      {
-        "number": 1426,
-        "title": "ARIA required owned elements (bc4a75): Elements should be allowed children _not_ required by their role",
-        "html_url": "https://github.com/act-rules/act-rules.github.io/issues/1426",
-        "labelNames": [
-          "WAI-ARIA 1.3"
-        ]
       }
     ],
     "blockers": [],
@@ -3681,12 +3673,6 @@
     "reportBucket": "notReady",
     "implementations": [],
     "issues": [
-      {
-        "number": 2467,
-        "title": "[0va7u6]",
-        "html_url": "https://github.com/act-rules/act-rules.github.io/issues/2467",
-        "labelNames": []
-      },
       {
         "number": 2408,
         "title": "\"HTML images contain no text\" [0va7u6]: Definition of \"rendered image resource\" is incorrect",
@@ -7560,14 +7546,6 @@
         "html_url": "https://github.com/act-rules/act-rules.github.io/issues/2272",
         "labelNames": [
           "accessibility support"
-        ]
-      },
-      {
-        "number": 1317,
-        "title": "Zoomed text node is not clipped with CSS overflow (59br37): Sufficiently large line heights will also cause clipping",
-        "html_url": "https://github.com/act-rules/act-rules.github.io/issues/1317",
-        "labelNames": [
-          "help wanted"
         ]
       }
     ],
