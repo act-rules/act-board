@@ -3192,6 +3192,7 @@
     "reportBucket": "approvedReadyForUpdate",
     "implementations": [
       "QualWeb",
+      "SortSite",
       "Total Validator",
       "Total Validator (+Browser)",
       "UsableNet AQA - WCAG 2.2 AA Auto",
