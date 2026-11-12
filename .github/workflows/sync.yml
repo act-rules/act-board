@@ -46,13 +46,13 @@ jobs:
         with:
           token: ${{ steps.app-token.outputs.token }}
 
-      # Pin to the act-tools#71 merge on main (sync-act-board-project /
-      # write-act-board-snapshot). Bump this SHA when the board job needs
-      # newer act-tools.
+      # Pin to the act-tools#74 merge on main (In review detection for open
+      # wcag-act-rules PRs). Bump this SHA when the board job needs newer
+      # act-tools.
       - uses: actions/checkout@v4
         with:
           repository: act-rules/act-tools
-          ref: 0e5820e251376e3c6e61978e0a12a0b07f540f1a
+          ref: 7d2c20011acd0c89d89c788bec02c93d91a075c7
           path: act-tools
           persist-credentials: false
 
