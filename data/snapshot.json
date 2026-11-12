@@ -491,7 +491,7 @@
         "html_url": "https://github.com/act-rules/act-rules.github.io/issues/2461",
         "labelNames": [
           "Rule Update",
-          "Agenda item",
+          "On hold",
           "WAI-ARIA 1.3"
         ]
       },
@@ -1371,9 +1371,9 @@
     "filename": "css-restrict-orientation-b33eff.md",
     "ruleTypeSummary": "atomic",
     "waiApproved": true,
-    "status": "Approved, unpublished changes",
-    "reviewPrUrl": null,
-    "reportBucket": "approvedReadyForUpdate",
+    "status": "In review",
+    "reviewPrUrl": "https://github.com/w3c/wcag-act-rules/pull/455",
+    "reportBucket": "notReady",
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
@@ -5867,7 +5867,7 @@
     "issues": [
       {
         "number": 2440,
-        "title": "[4e8ab6]Update the examples to comply with ARIA 1.3",
+        "title": "[4e8ab6] Update the examples to comply with ARIA 1.3",
         "html_url": "https://github.com/act-rules/act-rules.github.io/issues/2440",
         "labelNames": [
           "Rule Update",
@@ -6286,9 +6286,9 @@
     "filename": "summary-non-empty-accessible-name-2t702h.md",
     "ruleTypeSummary": "atomic",
     "waiApproved": true,
-    "status": "Approved, unpublished changes",
-    "reviewPrUrl": null,
-    "reportBucket": "approvedReadyForUpdate",
+    "status": "In review",
+    "reviewPrUrl": "https://github.com/w3c/wcag-act-rules/pull/456",
+    "reportBucket": "notReady",
     "implementations": [
       "Alfa (fully automated)",
       "Alfa (semi-automated)",
