@@ -7466,7 +7466,9 @@
     "implementations": [
       "Axe DevTools Pro",
       "Axe-core",
-      "SortSite"
+      "SortSite",
+      "Total Validator",
+      "Total Validator (+Browser)"
     ],
     "issues": [
       {
